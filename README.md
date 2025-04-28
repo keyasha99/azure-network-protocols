@@ -17,7 +17,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>Operating Systems Used </h2>
 
 - Windows 10 (21H2)
-- Ubuntu Server 20.04
+- Linux (Ubuntu) Server 20.04
 
 <h2>Actions and Observations</h2>
 
@@ -39,10 +39,10 @@ You can also use the ping command to check for Internet connnectivity. Here we p
 </p>
 <br />
 
-<h3>Network Security Group</h3>
+<h3>Network Security Group (Firewall)</h3>
 
 <p>
-<img src="https://i.imgur.com/5eHqrrd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/5eHqrrd.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
 Here, you can restart the packet capture by clicking on the green shark fin icon at the top by the stop icon. Click Continue without saving. In Windows Powershell, type ping 10.0.0.5 -t to start a perpetual ping from your Windows VM to your Linux VM.
@@ -50,15 +50,15 @@ Here, you can restart the packet capture by clicking on the green shark fin icon
 <br />
 
 <p>
-<img src="https://i.imgur.com/xAw4r7T.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/xAw4r7T.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
-Now, you're going to open the Network Security Group your Linux VM is using and disable incoming/inbound ICMP traffic. Essentially, you are configuring a cloud firewall to block the connection coming from the Windows VM. Go to linux-vm.
+Now, you're going to open the Network Security Group your Linux VM is using and disable incoming/inbound ICMP traffic. Essentially, you are configuring a cloud firewall to block the connection coming from the Windows VM. Go to Microsoft Azure and click on your Linux VM.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/GWGdREs.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/GWGdREs.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
 Then go to Network settings. Follow along through the next couple of screenshots.
@@ -66,7 +66,50 @@ Then go to Network settings. Follow along through the next couple of screenshots
 <br />
 
 <p>
-<img src="https://i.imgur.com/pUJST1G.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/pUJST1G.png" height="80%" width="80%" alt="Network Security Group"/>
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Af7awAJ.png" height="80%" width="80%" alt="Network Security Group"/>
+</p>
+<p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/O1VVnAf.png" height="80%" width="80%" alt="Network Security Group"/>
+</p>
+<p>
+Click on Add to create a new inbound security rule.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/8L553IV.png" height="80%" width="80%" alt="Network Security Group"/>
+</p>
+<p>
+For destination port ranges, put *, which means any because ICMP doesn't use a port. For Protocol, select ICMPv4 because the ping command uses the ICMP protocol as mentioned earlier. Select Deny for Action to block incoming traffic.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/ocZlm5y.png" height="80%" width="80%" alt="Network Security Group"/>
+</p>
+<p>
+Scroll down put 290 for Priority. What this does is place a higher priority on the rule over all the other ones. Then click Add.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/b7GzBiD.png" height="80%" width="80%" alt="Network Security Group"/>
+</p>
+<p>
+Switch back to the Windows VM to observe the traffic. After a while, once the rule takes into effect, the traffic will stop. On Windows Powershell, you will start seeing Request timed out. Notice that in Wireshark you see (no response found) in the Info column. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/0S8rbfb.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -74,7 +117,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <br />
 
 <p>
-<img src="https://i.imgur.com/Af7awAJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UZkRRvc.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -82,55 +125,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <br />
 
 <p>
-<img src="https://i.imgur.com/O1VVnAf.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/8L553IV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/ocZlm5y.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/b7GzBiD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/0S8rbfb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/UZkRRvc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/18oW8lO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/18oW8lO.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
