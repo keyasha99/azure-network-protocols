@@ -135,7 +135,7 @@ You can stop the ping activity by pressing ctrl+C.
 <h3>Secure Shell (SSH) Traffic</h3>
 
 <p>
-<img src="https://i.imgur.com/BGeGWXO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/BGeGWXO.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
 Start a new packet capture in Wireshark by clicking on Ethernet.
@@ -143,23 +143,23 @@ Start a new packet capture in Wireshark by clicking on Ethernet.
 <br />
 
 <p>
-<img src="https://i.imgur.com/yGQZmA6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/yGQZmA6.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
-Type ssh in the bar up top to filter for Secure Shell traffic. Open PowerShell and type ssh labuser@10.0.0.5. Using the ssh command helps us to connect to the Linux server securely over the network. Answer yes to the question "Are you sure you want to continue connecting (yes/no/[fingerprint])?" We are prompted to enter the Linux server's password. Enter the password and note that you won't see it being typed out for security purposes. 
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/bpwSHqD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Now we are connected to the Linux VM.
+You can either type ssh or tcp.port==22 in the bar up top to filter for Secure Shell traffic. Open PowerShell and type ssh labuser@10.0.0.5. Using the ssh command helps us to connect to the Linux server securely over the network. Answer yes to the question "Are you sure you want to continue connecting (yes/no/[fingerprint])?" We are prompted to enter the Linux server's password. Enter the password and note that you won't see it being typed out for security purposes. 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/mZye1bU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/bpwSHqD.png" height="80%" width="80%" alt="SSH"/>
+</p>
+<p>
+Now we are connected to the Linux VM. Notice in Wireshark that each data packet are encrypted, making it difficult for hackers to intercept and read the information.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/mZye1bU.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
 The commands typed here are just to verify that we are connected to the VM. The id command shows our user id. The hostname command shows us the name of the server or computer that we're connected to. Lastly, the uname -a command displays information of the operating system.
@@ -167,57 +167,57 @@ The commands typed here are just to verify that we are connected to the VM. The 
 <br />
 
 <p>
-<img src="https://i.imgur.com/WSaxH7E.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/WSaxH7E.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
 To end the SSH connection, type exit in the command line and you will see that the prompt has changed back to the Windows VM.
 </p>
 <br />
 
-<h3>DHCP Traffic</h3>
+<h3>Dynamic Host Configuration Protocol (DHCP) Traffic</h3>
 
 <p>
-<img src="https://i.imgur.com/PYji3S3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/PYji3S3.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In this exercise, we will observe DHCP traffic. DHCP is a network protocol that automatically assigns IP addresses and other network settings to devices when they connect to a network. Start a new packet capture in Wireshark and filter for dhcp. We are attempting to issue the Windows VM a new IP address from Powershell. Open Notepad and type what you see in the screenshot. 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/yPDti63.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/yPDti63.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/hSqBO2Y.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Go to File and click Save As. We are saving this text file in Program Data on our VM so in the bar up top, type c:\programdata and press Enter.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/FRyxksR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/hSqBO2Y.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/gz2BhIR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Save the file as dhcp.bat.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/TydXBHJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/FRyxksR.png" height="80%" width="80%" alt="DHCP"/>
+</p>
+<p>
+In Powershell, type cd c:\programdata to change the directory to Program Data. Type ls to access the list,ensuring that the text file is saved.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/gz2BhIR.png" height="80%" width="80%" alt="DHCP"/>
+</p>
+<p>
+Enter the command .\dhcp.bat to run the script. Nothing will happen at first, but a few moments later, the remote connection to the Windows VM will disconnect and re-connect. When the connection is restored, this is what you will see. During this process, the computer is releasing its IP address in favor for a new one from DHCP.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/TydXBHJ.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
