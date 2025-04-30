@@ -180,7 +180,7 @@ To end the SSH connection, type exit in the command line and you will see that t
 <img src="https://i.imgur.com/PYji3S3.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-In this exercise, we will observe DHCP traffic. DHCP is a network protocol that automatically assigns IP addresses and other network settings to devices when they connect to a network. Start a new packet capture in Wireshark and filter for dhcp. We are attempting to issue the Windows VM a new IP address from Powershell. Open Notepad and type what you see in the screenshot. 
+In this exercise, we will observe DHCP traffic. DHCP is a network protocol that automatically assigns IP addresses and other network settings to devices when they connect to a network. Start a new packet capture in Wireshark and filter for dhcp. You can also type udp.port ==67 || udp.port ==68. We are attempting to issue the Windows VM a new IP address from Powershell. Open Notepad and type what you see in the screenshot. 
 </p>
 <br />
 
@@ -212,7 +212,7 @@ In Powershell, type cd c:\programdata to change the directory to Program Data. T
 <img src="https://i.imgur.com/gz2BhIR.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-Enter the command .\dhcp.bat to run the script. Nothing will happen at first, but a few moments later, the remote connection to the Windows VM will disconnect and re-connect. When the connection is restored, this is what you will see. During this process, the computer is releasing its IP address in favor for a new one from DHCP.
+Enter the command .\dhcp.bat to run the script. Nothing will happen at first, but a few moments later, the remote connection to the Windows VM will disconnect and re-connect. When the connection is restored, this is what you will see. During this process, the computer released its IP address in favor for a new one from DHCP. In this case, the Windows VM requested the IP address that it had before.
 </p>
 <br />
 
@@ -220,7 +220,7 @@ Enter the command .\dhcp.bat to run the script. Nothing will happen at first, bu
 <img src="https://i.imgur.com/TydXBHJ.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Wireshark has captured the DHCP process. When ipconfig /release was executed, the Windows VM (10.0.0.4) sent a release packet to the Azure's DHCP server (168.63.129.16). When ipconfig /renew was executed, that's when the Discover, Offer, Request, and Acknowledge packets were sent over the Internet. Discover is when a device (client) sends a broadcast (255.255.255.255) to find a DHCP server. The Windows VM has a source address of 0.0.0.0 since it has no IP address. Offer is when the DHCP server responds with an offer, including an IP address. Lastly, the server confirms the assignment and the client can use the IP with the Acknowlege packet.
 </p>
 <br />
 
