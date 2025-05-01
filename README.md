@@ -146,7 +146,7 @@ Start a new packet capture in Wireshark by clicking on Ethernet.
 <img src="https://i.imgur.com/yGQZmA6.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
-You can either type ssh or tcp.port==22 in the bar up top to filter for Secure Shell traffic. Open PowerShell and type ssh labuser@10.0.0.5. Using the ssh command helps us to connect to the Linux server securely over the network. Answer yes to the question "Are you sure you want to continue connecting (yes/no/[fingerprint])?" We are prompted to enter the Linux server's password. Enter the password and note that you won't see it being typed out for security purposes. 
+You can either type ssh or tcp.port == 22 in the bar up top to filter for Secure Shell traffic. Open PowerShell and type ssh labuser@10.0.0.5. Using the ssh command helps us to connect to the Linux server securely over the network. Answer yes to the question "Are you sure you want to continue connecting (yes/no/[fingerprint])?" We are prompted to enter the Linux server's password. Enter the password and note that you won't see it being typed out for security purposes. 
 </p>
 <br />
 
@@ -180,7 +180,7 @@ To end the SSH connection, type exit in the command line and you will see that t
 <img src="https://i.imgur.com/PYji3S3.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-In this exercise, we will observe DHCP traffic. DHCP is a network protocol that automatically assigns IP addresses and other network settings to devices when they connect to a network. Start a new packet capture in Wireshark and filter for dhcp. You can also type udp.port ==67 || udp.port ==68. We are attempting to issue the Windows VM a new IP address from Powershell. Open Notepad and type what you see in the screenshot. 
+In this exercise, we will observe DHCP traffic. DHCP is a network protocol that automatically assigns IP addresses and other network settings to devices when they connect to a network. Start a new packet capture in Wireshark and filter for dhcp. You can also type udp.port == 67 || udp.port == 68. We are attempting to issue the Windows VM a new IP address from Powershell. Open Notepad and type what you see in the screenshot. 
 </p>
 <br />
 
@@ -224,28 +224,28 @@ Wireshark has captured the DHCP process. When ipconfig /release was executed, th
 </p>
 <br />
 
-<h3>DNS Traffic</h3>
+<h3>Domain Name System (DNS) Traffic</h3>
 <p>
-<img src="https://i.imgur.com/Gcn8OMe.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Gcn8OMe.png" height="80%" width="80%" alt="DNS"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/BsulkDA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+The purpose of this activity is to get an idea of how DNS works. DNS translates readable domain names into IP addresses so that computers can find and communicate with each other. The nslookup command examines DNS servers and find the IP address associated with a domain name or vice versa. As an example, you can use nslookup to find Disney's IP address.
 </p>
 <br />
 
-<h3>RDP Traffic</h3>
 <p>
-<img src="https://i.imgur.com/tdTcJIJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/BsulkDA.png" height="80%" width="80%" alt="DNS"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+When you try to enter the IP address in an Internet browser, it will not go through because the Internet only recognizes domain names, but you can tell that the IP belongs to Disney.
+</p>
+<br />
+
+<h3>Remote Desktop Protocol (RDP) Traffic</h3>
+<p>
+<img src="https://i.imgur.com/tdTcJIJ.png" height="80%" width="80%" alt="RDP"/>
+</p>
+<p>
+Here we are observing RDP traffic, which we are using to connect to the Windows VM. Once you start a new packet capture and filter for RDP, you will see non-stop traffic. This is because the RDP protocol is constantly showing you a live stream from one computer to another, meaning that traffic is always being transmitted.
 </p>
 <br />
