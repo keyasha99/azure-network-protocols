@@ -3,7 +3,7 @@
 </p>
 
 <h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
-In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
+In this tutorial, we use Wireshark to observe various network traffic to and from Azure Virtual Machines and experiment with Network Security Groups. <br />
 
 
 <h2>Environments and Technologies Used</h2>
@@ -27,15 +27,14 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. ICMP is a type of message that computers use to communicate with each other over the internet or network. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. The ping command uses ICMP traffic and tests to see if a computer or a server is reachable. In this case, we were able to reach the Linux server. In Wireshark & Powershell, we can see the Windows virtual machine sending four sets of request to Linux and Linux replying back to each one.
+Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. ICMP is a type of message that computers use to communicate with each other over the Internet or network. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. The ping command uses ICMP traffic and tests to see if a computer or a server is reachable. In this case, we were able to reach the Linux server. In Wireshark & Powershell, the Windows virtual machine sends four sets of requests to Linux, and Linux replies to each one.
 </p>
 <br />
 
 <p>
 <img src="https://i.imgur.com/08EHqWj.png" height="80%" width="80%" alt="ICMP Traffic"/>
 </p>
-<p>
-You can also use the ping command to check for Internet connnectivity. Here we ping www.google.com and it proves to be successful, meaning that the Internet connection is working.
+<p>You can also use the ping command to check for Internet connectivity. Here, we ping www.google.com, and it proves successful, meaning that the Internet connection is working.
 </p>
 <br />
 
@@ -53,7 +52,7 @@ Here, you can restart the packet capture by clicking on the green shark fin icon
 <img src="https://i.imgur.com/xAw4r7T.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
-Now, you're going to open the Network Security Group your Linux VM is using and disable incoming/inbound ICMP traffic. Essentially, you are configuring a cloud firewall to block the connection coming from the Windows VM. Go to Microsoft Azure and click on your Linux VM.
+Now, you will open your Linux VM's Network Security Group and disable incoming/inbound ICMP traffic. Essentially, you are configuring a cloud firewall to block the connection from the Windows VM. Go to Microsoft Azure and click on your Linux VM.
 </p>
 <br />
 
@@ -96,7 +95,7 @@ For destination port ranges, put *, which means any because ICMP doesn't use a p
 <img src="https://i.imgur.com/ocZlm5y.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
-Scroll down put 290 for Priority. What this does is place a higher priority on the rule over all the other ones. Then click Add.
+Scroll down and enter 290 for Priority. This will make the rule a higher priority than all the others. Then click Add.
 </p>
 <br />
 
@@ -104,7 +103,7 @@ Scroll down put 290 for Priority. What this does is place a higher priority on t
 <img src="https://i.imgur.com/b7GzBiD.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
-Switch back to the Windows VM to observe the traffic. After a while, once the rule takes into effect, the traffic will stop. On Windows Powershell, you will start seeing Request timed out. Notice that in Wireshark you see (no response found) in the Info column. 
+Switch back to the Windows VM to observe the traffic. After a while, once the rule takes effect, the traffic will stop. On Windows Powershell, you will start seeing Request timed out. Notice that you see (no response found) in the Info column in Wireshark. 
 </p>
 <br />
 
@@ -120,7 +119,7 @@ Now go back to the Network Security Group on Azure and delete the rule we just c
 <img src="https://i.imgur.com/UZkRRvc.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
-It will take awhile again for the change to be implemented. You will see replies from the Linux server again.
+The change will again take some time to implement. You will see replies from the Linux server again.
 </p>
 <br />
 
@@ -146,7 +145,7 @@ Start a new packet capture in Wireshark by clicking on Ethernet.
 <img src="https://i.imgur.com/yGQZmA6.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
-You can either type ssh or tcp.port == 22 in the bar up top to filter for Secure Shell traffic. Open PowerShell and type ssh labuser@10.0.0.5. Using the ssh command helps us to connect to the Linux server securely over the network. Answer yes to the question "Are you sure you want to continue connecting (yes/no/[fingerprint])?" We are prompted to enter the Linux server's password. Enter the password and note that you won't see it being typed out for security purposes. 
+You can type ssh or tcp.port == 22 in the bar up top to filter for Secure Shell traffic. Open PowerShell and type ssh labuser@10.0.0.5. The ssh command helps us securely connect to the Linux server over the network. Answer yes to the question, "Are you sure you want to continue connecting (yes/no/[fingerprint])?" Next, enter the Linux server's password. Enter the password; note that you won't see it typed out for security purposes.
 </p>
 <br />
 
@@ -154,7 +153,7 @@ You can either type ssh or tcp.port == 22 in the bar up top to filter for Secure
 <img src="https://i.imgur.com/bpwSHqD.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
-Now we are connected to the Linux VM. Notice in Wireshark that each data packet are encrypted, making it difficult for hackers to intercept and read the information.
+Now we are connected to the Linux VM. In Wireshark, notice that each data packet is encrypted, making it difficult for hackers to intercept and read the information.
 </p>
 <br />
 
@@ -162,7 +161,7 @@ Now we are connected to the Linux VM. Notice in Wireshark that each data packet 
 <img src="https://i.imgur.com/mZye1bU.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
-The commands typed here are just to verify that we are connected to the VM. The id command shows our user id. The hostname command shows us the name of the server or computer that we're connected to. Lastly, the uname -a command displays information of the operating system.
+The commands typed here are just to verify that you are connected to the VM. The id command shows our user ID. The hostname command shows the name of the server or computer that we're connected to. Lastly, the uname -a command displays information about the operating system.
 </p>
 <br />
 
@@ -170,7 +169,7 @@ The commands typed here are just to verify that we are connected to the VM. The 
 <img src="https://i.imgur.com/WSaxH7E.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
-To end the SSH connection, type exit in the command line and you will see that the prompt has changed back to the Windows VM.
+To end the SSH connection, type exit in the command line. The prompt will then change back to the Windows VM.
 </p>
 <br />
 
@@ -180,7 +179,7 @@ To end the SSH connection, type exit in the command line and you will see that t
 <img src="https://i.imgur.com/PYji3S3.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-In this exercise, we will observe DHCP traffic. DHCP is a network protocol that automatically assigns IP addresses and other network settings to devices when they connect to a network. Start a new packet capture in Wireshark and filter for dhcp. You can also type udp.port == 67 || udp.port == 68. We are attempting to issue the Windows VM a new IP address from Powershell. Open Notepad and type what you see in the screenshot. 
+In this exercise, we will observe DHCP traffic. DHCP is a network protocol that automatically assigns IP addresses and other network settings to devices when they connect to a network. Start a new packet capture in Wireshark and filter for DHCP. You can also type udp.port == 67 || udp.port == 68. We are attempting to issue a new IP address for the Windows VM from Powershell. Open Notepad and type what you see in the screenshot. 
 </p>
 <br />
 
@@ -188,7 +187,7 @@ In this exercise, we will observe DHCP traffic. DHCP is a network protocol that 
 <img src="https://i.imgur.com/yPDti63.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-Go to File and click Save As. We are saving this text file in Program Data on our VM so in the bar up top, type c:\programdata and press Enter.
+Go to File and click Save As. We are saving this text file in Program Data on our VM, so in the bar up top, type c:\programdata and press Enter.
 </p>
 <br />
 
@@ -204,7 +203,7 @@ Save the file as dhcp.bat.
 <img src="https://i.imgur.com/FRyxksR.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-In Powershell, type cd c:\programdata to change the directory to Program Data. Type ls to access the list,ensuring that the text file is saved.
+In Powershell, type cd c:\programdata to change the directory to Program Data. Type ls to access the list, ensuring the text file is saved.
 </p>
 <br />
 
@@ -212,7 +211,7 @@ In Powershell, type cd c:\programdata to change the directory to Program Data. T
 <img src="https://i.imgur.com/gz2BhIR.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-Enter the command .\dhcp.bat to run the script. Nothing will happen at first, but a few moments later, the remote connection to the Windows VM will disconnect and re-connect. When the connection is restored, this is what you will see. During this process, the computer released its IP address in favor for a new one from DHCP. In this case, the Windows VM requested the IP address that it had before.
+Enter the command .\dhcp.bat to run the script. Nothing will happen at first, but a few moments later, the remote connection to the Windows VM will disconnect and reconnect. This is what you will see when the connection is restored. During this process, the computer released its IP address in favor of a new one from DHCP. In this case, the Windows VM requested the IP address it had before.
 </p>
 <br />
 
@@ -220,7 +219,7 @@ Enter the command .\dhcp.bat to run the script. Nothing will happen at first, bu
 <img src="https://i.imgur.com/TydXBHJ.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-Wireshark has captured the DHCP process. When ipconfig /release was executed, the Windows VM (10.0.0.4) sent a release packet to the Azure's DHCP server (168.63.129.16). When ipconfig /renew was executed, that's when the Discover, Offer, Request, and Acknowledge packets were sent over the Internet. Discover is when a device (client) sends a broadcast (255.255.255.255) to find a DHCP server. The Windows VM has a source address of 0.0.0.0 since it has no IP address. Offer is when the DHCP server responds with an offer, including an IP address. Lastly, the server confirms the assignment and the client can use the IP with the Acknowlege packet.
+Wireshark has captured the DHCP process. The computer executed the ipconfig /release command and sent a release packet to Azure's DHCP server (168.63.129.16). When ipconfig /renew was executed, the Discover, Offer, Request, and Acknowledge packets were sent over the Internet. Discover is when a device (client) sends a broadcast (255.255.255.255) to find a DHCP server. The Windows VM has a source address of 0.0.0.0 since it has no IP address. Offer is when the DHCP server responds with an offer, including an IP address. Lastly, the server confirms the assignment, and the client can use the IP with the Acknowledge packet.
 </p>
 <br />
 
@@ -229,7 +228,7 @@ Wireshark has captured the DHCP process. When ipconfig /release was executed, th
 <img src="https://i.imgur.com/Gcn8OMe.png" height="80%" width="80%" alt="DNS"/>
 </p>
 <p>
-The purpose of this activity is to get an idea of how DNS works. DNS translates readable domain names into IP addresses so that computers can find and communicate with each other. The nslookup command examines DNS servers and find the IP address associated with a domain name or vice versa. As an example, you can use nslookup to find Disney's IP address.
+This activity aims to give you an idea of how DNS works. DNS translates readable domain names into IP addresses so that computers can find and communicate with each other. The nslookup command examines DNS servers and finds the IP address associated with a domain name or vice versa. For example, you can use nslookup to find Disney's IP address.
 </p>
 <br />
 
@@ -246,6 +245,6 @@ When you try to enter the IP address in an Internet browser, it will not go thro
 <img src="https://i.imgur.com/tdTcJIJ.png" height="80%" width="80%" alt="RDP"/>
 </p>
 <p>
-Here we are observing RDP traffic, which we are using to connect to the Windows VM. Once you start a new packet capture and filter for RDP, you will see non-stop traffic. This is because the RDP protocol is constantly showing you a live stream from one computer to another, meaning that traffic is always being transmitted.
+Here, we observe RDP traffic, which we use to connect to the Windows VM. You will see non-stop traffic once you start a new packet capture and filter for RDP. The RDP protocol constantly shows you a live stream from one computer to another, meaning traffic is always transmitted.
 </p>
 <br />
