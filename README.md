@@ -114,63 +114,63 @@ Create an administrator account for when you log into the virtual machine.
 <img src="https://i.imgur.com/xGuzMYi.png" height="80%" width="80%" alt="ICMP Traffic"/>
 </p>
 <p>
-Make sure to check the box listed under Licensing.
+Make sure to check the box listed under Licensing. Click Next.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+<img src="https://i.imgur.com/UBytmE5.png" height="80%" width="80%" alt="ICMP Traffic"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
-</p>
-<p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+Leave everything as is and click Next to Networking.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+<img src="https://i.imgur.com/y8d16Ob.png" height="80%" width="80%" alt="ICMP Traffic"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
-</p>
-<p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+Go to Create new for your Virtual Network.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+<img src="https://i.imgur.com/lZqRqoQ.png" height="80%" width="80%" alt="ICMP Traffic"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
-</p>
-<p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+Name your virtual network and click OK.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+<img src="https://i.imgur.com/DTsMfdU.png" height="80%" width="80%" alt="ICMP Traffic"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+Go to Review + create.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/UtLb3SZ.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Click Create.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/P1FMCEs.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Wait for the deployment to be created.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/5QYyiR8.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Now that the Windows 10 VM is created, you need to create the Linux VM. Just go to Create another VM.
 </p>
 <br />
 
