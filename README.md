@@ -27,7 +27,7 @@ In this tutorial, we use Wireshark to observe various network traffic to and fro
 <img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. ICMP is a type of message that computers use to communicate with each other over the Internet or network. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. The ping command uses ICMP traffic and tests to see if a computer or a server is reachable. In this case, we were able to reach the Linux server. In Wireshark & Powershell, the Windows virtual machine sends four sets of requests to Linux, and Linux replies to each one.
+Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
 </p>
 <br />
 
@@ -52,7 +52,7 @@ Here, you can restart the packet capture by clicking on the green shark fin icon
 <img src="https://i.imgur.com/xAw4r7T.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
-Now, you will open your Linux VM's Network Security Group and disable incoming/inbound ICMP traffic. Essentially, you are configuring a cloud firewall to block the connection from the Windows VM. Go to Microsoft Azure and click on your Linux VM.
+Now, you will open your Linux VM's Network Security Group and disable incoming/inbound ICMP traffic. In Microsoft Azure, click on virtual machines and then double-click on your Linux VM.
 </p>
 <br />
 
@@ -87,7 +87,7 @@ Click on Add to create a new inbound security rule.
 <img src="https://i.imgur.com/8L553IV.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
-For destination port ranges, put *, which means any because ICMP doesn't use a port. For Protocol, select ICMPv4 because the ping command uses the ICMP protocol as mentioned earlier. Select Deny for Action to block incoming traffic.
+For destination port ranges, put *, which means any because ICMP doesn't use a port. For Protocol, select ICMPv4. For Action, select Deny to block incoming traffic.
 </p>
 <br />
 
@@ -145,7 +145,7 @@ Start a new packet capture in Wireshark by clicking on Ethernet.
 <img src="https://i.imgur.com/yGQZmA6.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
-You can type ssh or tcp.port == 22 in the bar up top to filter for Secure Shell traffic. Open PowerShell and type ssh labuser@10.0.0.5. The ssh command helps us securely connect to the Linux server over the network. Answer yes to the question, "Are you sure you want to continue connecting (yes/no/[fingerprint])?" Next, enter the Linux server's password. Enter the password; note that you won't see it typed out for security purposes.
+Type ssh in the bar up top to filter for Secure Shell traffic. Open PowerShell and type ssh labuser@10.0.0.5. Answer yes to the question, "Are you sure you want to continue connecting (yes/no/[fingerprint])?" Next, enter the Linux server's password. Enter the password; note that you won't see it typed out for security purposes.
 </p>
 <br />
 
