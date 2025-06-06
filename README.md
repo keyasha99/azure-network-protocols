@@ -21,7 +21,103 @@ In this tutorial, we use Wireshark to observe various network traffic to and fro
 
 <h2>Actions and Observations</h2>
 
-<h3>Internet Control Message Protocol (ICMP) Traffic</h3>
+<h3>Creating Virtual Machines</h3>
+
+<p>
+<img src="https://i.imgur.com/OqAVhfl.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+To begin this tutorial, you need to create a Windows 10 VM and a Linux VM. In Microsoft Azure, go to Resource groups.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Ag6UfAx.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Here, I've already created my resource group. To make one, click on Create.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/YXRkEOY.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Name your resource group to anything you want and set the region to whatever region you live in. Click on Review + create.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/X8HNU8M.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Click Create.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/fFlQxL0.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Next, you have to create the virtual machines. Click on the bar at top, search for Virtual machines, and click on it.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/qTgCtDw.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Go to Create and select Virtual machine.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+</p>
+<br />
 
 <p>
 <img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
