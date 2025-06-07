@@ -19,7 +19,7 @@ In this tutorial, we use Wireshark to observe various network traffic to and fro
 - Windows 10 (21H2)
 - Linux (Ubuntu) Server 20.04
 
-<h2>Actions and Observations</h2>
+<h2>Prerequisites</h2>
 
 <h3>Creating Virtual Machines</h3>
 
@@ -294,13 +294,7 @@ Click Yes and you'll be remotely connected to your virtual machine.
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
-</p>
-<p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
-</p>
-<br />
+<h3>Installing Wireshark</h3>
 
 <p>
 <img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
@@ -349,6 +343,16 @@ Upon opening Wireshark, click on Ethernet to start packet capture. In the search
 Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+</p>
+<br />
+
+<h2>Actions and Observations</h2>
 
 <h3>Observing ICMP Traffic</h3>
 
