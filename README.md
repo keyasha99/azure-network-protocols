@@ -175,6 +175,134 @@ Now that the Windows 10 VM is created, you need to create the Linux VM. Just go 
 <br />
 
 <p>
+<img src="https://i.imgur.com/1fHTJEJ.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Choose the same resource group as before and name the Linux VM.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Nges0jN.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Select the image as seen in the screenshot.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/0lsdLi2.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+For size, choose the same one for the Windows 10 VM.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/OaTtehW.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Change the Authentication type from SSH public key to Password and create your administration account. You can use the same one you used for the Windows 10 VM. Click Next to Disks.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/lFNiT8m.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+As before, leave everything as is and go to Next for Networking.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/gLghbXe.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Ensure that the virtual network you created is already selected. Click Review + create.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/0cYCkQq.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Create the virtual machine.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/uLjjZfP.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Wait for the deployment to be completed.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/pEWO5vB.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Now go back to Virtual machines using the search bar.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/00QiYkW.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Go to Start on your computer, search for Remote Desktop Connection and open it.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/XnuXoTw.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Copy and paste the public IP address of the Windows 10 VM and go to Connect.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/LymJI9K.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Go to More choices.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/RuAuh2m.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Click on Use a different account.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/zqjq55W.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Use the administration account you've made when creating the virtual machines.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/RQBqEik.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Click Yes and you'll be remotely connected to your virtual machine.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+</p>
+<br />
+
+<p>
 <img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
 </p>
 <p>
