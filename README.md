@@ -443,10 +443,34 @@ Wireshark should now be on your desktop.
 <h3>Observing ICMP Traffic</h3>
 
 <p>
+<img src="https://i.imgur.com/oa6Tptz.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Upon opening Wireshark, click on Ethernet to start packet capture.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/OaqqOKC.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+In the search bar at the top, type in "icmp" to filter for ICMP traffic.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/JQkddiE.png" height="80%" width="80%" alt="ICMP Traffic"/>
+</p>
+<p>
+Go to the Start icon of your computer and search for Windows PowerShell. Open it and type in ping 10.0.0.5 to reach the Linux virtual machine.
+</p>
+<br />
+
+<p>
 <img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="ICMP Traffic"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+As you can see, we were able to reach the Linux server.
 </p>
 <br />
 
