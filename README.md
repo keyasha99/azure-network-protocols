@@ -305,114 +305,138 @@ Go to http://www.wireshark.org and click on Download.
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
+<img src="https://i.imgur.com/A1V9F4k.png" height="80%" width="80%" alt="Wireshark Installation"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
-</p>
-<p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+Select Windows x64 Installer and the file will start downloading.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
+<img src="https://i.imgur.com/rkEgFpW.png" height="80%" width="80%" alt="Wireshark Installation"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
-</p>
-<p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+Once the download is finished, go to the top right corner and open the file.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
+<img src="https://i.imgur.com/4trI1y0.png" height="80%" width="80%" alt="Wireshark Installation"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
-</p>
-<p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+Click Next to continue. 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
+<img src="https://i.imgur.com/fOJEsVD.png" height="80%" width="80%" alt="Wireshark Installation"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
-</p>
-<p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+Click Noted.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
+<img src="https://i.imgur.com/lGxvVEC.png" height="80%" width="80%" alt="Wireshark Installation"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
-</p>
-<p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+Click Next.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
+<img src="https://i.imgur.com/sSz6wK2.png" height="80%" width="80%" alt="Wireshark Installation"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
-</p>
-<p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+Leave everything as is and click Next.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
+<img src="https://i.imgur.com/pZQpCrB.png" height="80%" width="80%" alt="Wireshark Installation"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+If you like, you could also check the box for Wireshark Desktop Icon like how I did here. Click Next.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/tQUL2Rm.png" height="80%" width="80%" alt="Wireshark Installation"/>
+<img src="https://i.imgur.com/Lu9nMQa.png" height="80%" width="80%" alt="Wireshark Installation"/>
 </p>
 <p>
-Upon opening Wireshark, click on Ethernet to start packet capture. In the search bar at the top, type in "icmp" to filter for ICMP traffic. Go to the Start icon of your computer and search for Windows PowerShell. Type in ping 10.0.0.5 to reach the Linux virtual machine we created. As you can see, we were able to reach the Linux server.
+Click Next.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Rjd6Wr7.png" height="80%" width="80%" alt="Wireshark Installation"/>
+</p>
+<p>
+Enusre that the box is checked for Install Npcap 1.79 and click Next.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/4GQpack.png" height="80%" width="80%" alt="Wireshark Installation"/>
+</p>
+<p>
+Click Install.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/i4K3y19.png" height="80%" width="80%" alt="Wireshark Installation"/>
+</p>
+<p>
+Select I Agree to the License Agreement.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/MX0DFEi.png" height="80%" width="80%" alt="Wireshark Installation"/>
+</p>
+<p>
+Click Install.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/2D2htNp.png" height="80%" width="80%" alt="Wireshark Installation"/>
+</p>
+<p>
+Once the installation is completed, proceed forward.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/3AnHe1F.png" height="80%" width="80%" alt="Wireshark Installation"/>
+</p>
+<p>
+Click Finish.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/gzjjGlQ.png" height="80%" width="80%" alt="Wireshark Installation"/>
+</p>
+<p>
+Click Next.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/OQt5yVk.png" height="80%" width="80%" alt="Wireshark Installation"/>
+</p>
+<p>
+Click Finish to close Setup.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/J8pTOLn.jpeg" height="80%" width="80%" alt="Wireshark Installation"/>
+</p>
+<p>
+Wireshark should now be on your desktop.
 </p>
 <br />
 
@@ -526,7 +550,7 @@ You can stop the ping activity by pressing ctrl+C.
 </p>
 <br />
 
-<h3>Secure Shell (SSH) Traffic</h3>
+<h3>Observing SSH Traffic</h3>
 
 <p>
 <img src="https://i.imgur.com/BGeGWXO.png" height="80%" width="80%" alt="SSH"/>
@@ -568,7 +592,7 @@ To end the SSH connection, type exit in the command line. The prompt will then c
 </p>
 <br />
 
-<h3>Dynamic Host Configuration Protocol (DHCP) Traffic</h3>
+<h3>Observing DHCP Traffic</h3>
 
 <p>
 <img src="https://i.imgur.com/PYji3S3.png" height="80%" width="80%" alt="DHCP"/>
@@ -618,7 +642,7 @@ Wireshark has captured the DHCP process. The computer executed the ipconfig /rel
 </p>
 <br />
 
-<h3>Domain Name System (DNS) Traffic</h3>
+<h3>Observing DNS Traffic</h3>
 <p>
 <img src="https://i.imgur.com/Gcn8OMe.png" height="80%" width="80%" alt="DNS"/>
 </p>
@@ -635,7 +659,7 @@ When you try to enter the IP address in an Internet browser, it will not go thro
 </p>
 <br />
 
-<h3>Remote Desktop Protocol (RDP) Traffic</h3>
+<h3>Observing RDP Traffic</h3>
 <p>
 <img src="https://i.imgur.com/tdTcJIJ.png" height="80%" width="80%" alt="RDP"/>
 </p>
