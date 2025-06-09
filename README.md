@@ -43,7 +43,7 @@ Here, I've already created my resource group. To make one, click on Create.
 <img src="https://i.imgur.com/YXRkEOY.png" height="80%" width="80%" alt="Creating VMs"/>
 </p>
 <p>
-Name your resource group to anything you want and set the region to whatever region you live in. Click on Review + create.
+Name your resource group to anything you want and set the region to wherever region you live in. Click on Review + create.
 </p>
 <br />
 
@@ -484,10 +484,26 @@ As you can see, we were able to reach the Linux server.
 <h3>Network Security Group (Firewall)</h3>
 
 <p>
+<img src="https://i.imgur.com/xxykVl5.png" height="80%" width="80%" alt="Network Security Group"/>
+</p>
+<p>
+Here, you can restart the packet capture by clicking on the green shark fin icon at the top by the stop icon.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/w1DlXFR.png" height="80%" width="80%" alt="Network Security Group"/>
+</p>
+<p>
+Click Continue without saving.
+</p>
+<br />
+
+<p>
 <img src="https://i.imgur.com/5eHqrrd.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
-Here, you can restart the packet capture by clicking on the green shark fin icon at the top by the stop icon. Click Continue without saving. In Windows Powershell, type ping 10.0.0.5 -t to start a perpetual ping from your Windows VM to your Linux VM.
+In Windows Powershell, type ping 10.0.0.5 -t to start a perpetual ping from your Windows VM to your Linux VM.
 </p>
 <br />
 
@@ -495,7 +511,7 @@ Here, you can restart the packet capture by clicking on the green shark fin icon
 <img src="https://i.imgur.com/xAw4r7T.png" height="80%" width="80%" alt="Network Security Group"/>
 </p>
 <p>
-Now, you will open your Linux VM's Network Security Group and disable incoming/inbound ICMP traffic. In Microsoft Azure, click on virtual machines and then double-click on your Linux VM.
+While the perpetual ping is going, you will open your Linux VM's Network Security Group and disable incoming/inbound ICMP traffic. Back in Microsoft Azure on your personal desktop, click on virtual machines and then double-click on your Linux VM.
 </p>
 <br />
 
@@ -585,10 +601,34 @@ Start a new packet capture in Wireshark by clicking on Ethernet.
 <br />
 
 <p>
-<img src="https://i.imgur.com/yGQZmA6.png" height="80%" width="80%" alt="SSH"/>
+<img src="https://i.imgur.com/qFv2PMO.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
-Type ssh in the bar up top to filter for Secure Shell traffic. Open PowerShell and type ssh labuser@10.0.0.5. Answer yes to the question, "Are you sure you want to continue connecting (yes/no/[fingerprint])?" Next, enter the Linux server's password. Enter the password; note that you won't see it typed out for security purposes.
+Type ssh in the bar up top to filter for Secure Shell traffic.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/UcqIrVC.png" height="80%" width="80%" alt="SSH"/>
+</p>
+<p>
+Open PowerShell and type ssh labuser@10.0.0.5 to connect to the Linux VM.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Q5gCAzL.png" height="80%" width="80%" alt="SSH"/>
+</p>
+<p>
+Answer yes to the question, "Are you sure you want to continue connecting (yes/no/[fingerprint])?"
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/irG9rAB.png" height="80%" width="80%" alt="SSH"/>
+</p>
+<p>
+Next, enter the Linux server's password. Enter the password; note that you won't see it typed out for security purposes.
 </p>
 <br />
 
@@ -601,10 +641,26 @@ Now we are connected to the Linux VM. In Wireshark, notice that each data packet
 <br />
 
 <p>
-<img src="https://i.imgur.com/mZye1bU.png" height="80%" width="80%" alt="SSH"/>
+<img src="https://i.imgur.com/nf1XEKK.png" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
-The commands typed here are just to verify that you are connected to the VM. The id command shows our user ID. The hostname command shows the name of the server or computer that we're connected to. Lastly, the uname -a command displays information about the operating system.
+The following commands typed here are just to verify that you are connected to the VM. The id command shows our user ID.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/LJOdkUy.png" height="80%" width="80%" alt="SSH"/>
+</p>
+<p>
+The hostname command shows the name of the server or computer that we're connected to.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Kgj030n.png" height="80%" width="80%" alt="SSH"/>
+</p>
+<p>
+Lastly, the uname -a command displays information about the operating system.
 </p>
 <br />
 
@@ -622,7 +678,7 @@ To end the SSH connection, type exit in the command line. The prompt will then c
 <img src="https://i.imgur.com/PYji3S3.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-In this exercise, we will observe DHCP traffic. DHCP is a network protocol that automatically assigns IP addresses and other network settings to devices when they connect to a network. Start a new packet capture in Wireshark and filter for DHCP. You can also type udp.port == 67 || udp.port == 68. We are attempting to issue a new IP address for the Windows VM from Powershell. Open Notepad and type what you see in the screenshot. 
+Now, we will observe DHCP traffic. Start a new packet capture in Wireshark and filter for DHCP. We are attempting to issue a new IP address for the Windows VM from Powershell. Open Notepad and type what you see in the screenshot. 
 </p>
 <br />
 
@@ -662,7 +718,7 @@ Enter the command .\dhcp.bat to run the script. Nothing will happen at first, bu
 <img src="https://i.imgur.com/TydXBHJ.png" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-Wireshark has captured the DHCP process. The computer executed the ipconfig /release command and sent a release packet to Azure's DHCP server (168.63.129.16). When ipconfig /renew was executed, the Discover, Offer, Request, and Acknowledge packets were sent over the Internet. Discover is when a device (client) sends a broadcast (255.255.255.255) to find a DHCP server. The Windows VM has a source address of 0.0.0.0 since it has no IP address. Offer is when the DHCP server responds with an offer, including an IP address. Lastly, the server confirms the assignment, and the client can use the IP with the Acknowledge packet.
+Wireshark has captured the DHCP process. The computer executed the ipconfig /release command and sent a release packet to Azure's DHCP server (168.63.129.16). When ipconfig /renew was executed, the Discover, Offer, Request, and Acknowledge packets were sent over the Internet.
 </p>
 <br />
 
@@ -671,7 +727,7 @@ Wireshark has captured the DHCP process. The computer executed the ipconfig /rel
 <img src="https://i.imgur.com/Gcn8OMe.png" height="80%" width="80%" alt="DNS"/>
 </p>
 <p>
-This activity aims to give you an idea of how DNS works. DNS translates readable domain names into IP addresses so that computers can find and communicate with each other. The nslookup command examines DNS servers and finds the IP address associated with a domain name or vice versa. For example, you can use nslookup to find Disney's IP address.
+This activity aims to give you an idea of how DNS works. Start a new packet capture and filter for DNS. The nslookup command examines DNS servers and finds the IP address associated with a domain name or vice versa. For example, you can use nslookup to find Disney's IP address.
 </p>
 <br />
 
